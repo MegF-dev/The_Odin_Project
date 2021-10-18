@@ -1,0 +1,315 @@
+body {
+  background-image: url("../images/blank background.jpg");
+
+  margin: 0px;
+
+  background-color: #7884aa;
+
+  background-size: 100%;
+
+  background-repeat: no-repeat;
+
+  min-height: 100%;
+
+  background-position: top center;
+
+  font-family: "Impact", "Charcoal", sans-serif;
+
+  font-size: 30px;
+
+  letter-spacing: 1.1px;
+
+  color: white;
+}
+
+.player {
+  left: 25%;
+}
+
+.computer {
+  right: 25%;
+}
+
+.computer,
+.player {
+  position: absolute;
+
+  top: 200px;
+
+  height: 400px;
+
+  width: 100px;
+}
+
+.player .rock,
+.player .scissors,
+.player .paper {
+  left: 0;
+}
+
+.computer .rock,
+.computer .scissors,
+.computer .paper {
+  right: 0;
+}
+
+.rock,
+.scissors,
+.paper {
+  position: absolute;
+
+  height: 25%;
+}
+
+.rock {
+  top: 0;
+}
+
+.paper {
+  top: 33%;
+}
+
+.scissors {
+  top: 67%;
+}
+
+.player img {
+  transition: height 0.5s, opacity 1s, left 1s;
+}
+
+.computer img {
+  transition: height 0.5s, opacity 1s, right 1s;
+}
+
+.player img:hover {
+  height: 30%;
+}
+
+.player.chose-something img {
+  opacity: 0;
+
+  left: -150px;
+}
+
+.player img.selected-item {
+  opacity: 1;
+
+  left: 150px;
+
+  height: 30%;
+}
+
+.computer.chose-something img {
+  opacity: 0;
+
+  right: -150px;
+}
+
+.computer img.selected-item {
+  opacity: 1;
+
+  height: 30%;
+
+  right: 150px;
+}
+
+.choiceText {
+  color: white;
+}
+
+.uText {
+  position: absolute;
+
+  left: 23%;
+
+  top: 1%;
+}
+
+.cText {
+  position: absolute;
+
+  left: 66%;
+
+  top: 1%;
+}
+
+body.game-over .btnreset {
+  display: block;
+}
+
+body.reset .btnreset {
+  opacity: 1;
+}
+
+.btnreset {
+  position: relative;
+
+  display: block;
+
+  margin: 30px auto;
+
+  display: none;
+
+  opacity: 0;
+
+  transition: opacity 0.8s ease;
+
+  width: 155px;
+
+  height: 90px;
+
+  font-size: 1em;
+
+  font-weight: light;
+
+  font-family: "Audiowide", cursive;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+
+  color: black;
+
+  border: none;
+
+  background: white;
+
+  box-shadow: 2px 2px 7px black;
+}
+
+body.game-over .player img,
+body.game-over .computer img {
+  opacity: 0;
+}
+
+body.game-over #gif {
+  display: block;
+
+  opacity: 1;
+}
+
+#gif {
+  opacity: 0;
+
+  display: none;
+
+  position: relative;
+
+  top: 100px;
+
+  left: 20px;
+
+  margin: 0 auto;
+
+  transition: opacity 0.8s ease;
+}
+
+.score {
+  display: block;
+
+  position: absolute;
+
+  top: -80px;
+
+  width: 100%;
+
+  height: 1em;
+
+  font-size: 1em;
+
+  font-weight: light;
+
+  font-family: "Impact", "Charcoal", sans-serif;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+
+  color: white;
+
+  text-align: center;
+}
+
+@media (max-width: 990px) {
+  .cText {
+    left: 50%;
+
+    right: 0%;
+
+    padding: 0 0.5em;
+
+    text-align: center;
+  }
+
+  .uText {
+    left: 0%;
+
+    right: 50%;
+
+    padding: 0 0.5em;
+
+    text-align: center;
+  }
+
+  .btnreset {
+    position: absolute;
+
+    left: 50%;
+
+    margin-left: -79px;
+
+    top: 90px;
+  }
+
+  img#gif {
+    top: 200px;
+
+    width: 70%;
+
+    padding-top: 40px;
+
+    height: auto;
+  }
+
+  .rock,
+  .scissors,
+  .paper {
+    height: 15%;
+  }
+
+  .player img.selected-item {
+    height: 18%;
+  }
+
+  .computer img.selected-item {
+    height: 18%;
+  }
+
+  .player.chose-something img {
+    opacity: 0;
+
+    left: -50px;
+  }
+
+  .player img.selected-item {
+    opacity: 1;
+
+    left: 50px;
+  }
+
+  .computer.chose-something img {
+    opacity: 0;
+
+    right: -50px;
+  }
+
+  .computer img.selected-item {
+    opacity: 1;
+
+    right: 50px;
+  }
+
+  .player img:hover {
+    height: 18%;
+  }
+}
