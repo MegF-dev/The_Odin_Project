@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const display_winner_ms = 4500;
-
   let playerScore = 0;
-
   let computerScore = 0;
 
   function compChoice() {
@@ -34,9 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function compare() {
     let lookuptable = {
       scissors: { rock: -1, scissors: 0, paper: 1 },
-
       rock: { rock: 0, scissors: 1, paper: -1 },
-
       paper: { rock: 1, scissors: -1, paper: 0 },
     };
 
@@ -53,9 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".computer .score").innerHTML = computerScore;
 
     let gif = document.querySelector("#gif");
-
     let fightAnimation = "";
-
     let afterAnimation = "";
 
     gif.setAttribute("src", "");
@@ -86,13 +80,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   let computerChoice;
-
   let playerschoice = "";
 
   const playerclasses = document.querySelector(".player").classList;
-
   const computerclasses = document.querySelector(".computer").classList;
-
   const elements = document.querySelectorAll(".player img");
 
   for (let i = 0; i < elements.length; i += 1) {
