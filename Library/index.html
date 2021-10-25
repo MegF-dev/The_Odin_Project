@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="model">
+      <div id="wrapper">
+        <h1 class="page-title">Library</h1>
+        <hr class="underline" />
+        <button class="addBookBtn" id="newBook">Add New Book</button>
+        <div id="bookInput" style="display: none">
+          <form class="form-style">
+            <div class="close">&times;</div>
+            <span class="display-error" style="display: none"
+              >Please fill out all the fields</span
+            >
+            Author<input id="inputAuthor" /> Title<input id="inputTitle" />
+            Number of Pages<input id="inputPages" />Read?
+            <label class="switch">
+              <input id="inputRead" type="checkbox" unchecked />
+              <span class="slider round"></span>
+            </label>
+            <input id="submitInput" type="submit" />
+          </form>
+        </div>
+        <div id="table-books">
+          <table>
+            <tbody>
+              <tr>
+                <th style="text-align: left">Title</th>
+                <th>Author</th>
+                <th>Number of Pages</th>
+                <th>Read?</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

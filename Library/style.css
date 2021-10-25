@@ -1,0 +1,223 @@
+@font-face {
+  font-family: earthOrbiter;
+  src: url(earthorbiterbold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(to bottom right, #7835e4, #36aefc);
+  height: 100vh;
+  background-repeat: no-repeat;
+  font-family: Roboto, sans-serif;
+}
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-title {
+  font-family: earthOrbiter;
+  padding-top: 50px;
+  padding-bottom: 35px;
+  color: #ffffffb8;
+
+  font-size: 3em;
+}
+.underline {
+  width: 40%;
+  margin-bottom: 50px;
+}
+.addBookBtn,
+.removeBtn {
+  background-image: -webkit-linear-gradient(top, #f4f1ee52, #ffffff7d);
+  background-image: linear-gradient(top, #f4f1ee52, #ffffff7d);
+
+  border-radius: 10px;
+  /* box-shadow: 0px 8px 10px 0px rgb(0 0 0 / 30%), inset 0px 4px 1px 1px white,
+    inset 0px -3px 1px 1px rgb(204 198 197 / 50%); */
+  height: 40px;
+  border: 0px;
+  width: 150px;
+  font-size: 0.9em;
+  color: white;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+
+  margin-bottom: 50px;
+
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.removeBtn {
+  width: 90px;
+  margin: 0px;
+}
+.addBookBtn:hover,
+.removeBtn:hover {
+  background-image: -webkit-linear-gradient(top, #fff, #f4f1ee);
+  background-image: linear-gradient(top, #fff, #f4f1ee);
+  color: #0088cc;
+}
+
+button:focus {
+  border: none;
+  outline: none;
+}
+button {
+  background-color: #ffffff1a !important;
+}
+.addBookBtn:active,
+.removeBtn:active {
+  background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
+  background-image: linear-gradient(top, #efedec, #f7f4f4);
+  box-shadow: 0 3px 5px 0 rgb(0 0 0 / 40%),
+    inset 0px -3px 1px 1px rgb(204 198 197 / 50%);
+}
+.form-style {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  top: 20vh;
+  z-index: 1;
+  padding: 30px 70px 70px 70px;
+  border-radius: 20px;
+  background: #b4b4f6d9;
+  font-weight: bold;
+  font-size: 1em;
+  margin: 0 auto;
+  position: relative;
+  color: white;
+}
+#bookInput {
+  position: absolute;
+  display: flex;
+  background-color: #00000063;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  background-color: #ffffff99;
+  padding: 15px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 8px 10px 0px rgb(0 0 0 / 7%);
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+#submitInput {
+  font-size: 1em;
+  color: white;
+  font-weight: 700;
+  background-color: #845dc9;
+  cursor: pointer;
+}
+.display-error {
+  color: #673ab7;
+  padding-bottom: 20px;
+}
+.close {
+  align-self: end;
+  position: relative;
+  top: -20px;
+  right: -40px;
+  font-size: 35px;
+  cursor: pointer;
+}
+#table-books {
+  background-color: #11f7ed73;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 10px 0px rgb(0 0 0 / 7%);
+}
+table {
+  border-collapse: collapse;
+}
+td {
+  height: 100px;
+  padding-right: 35px;
+  color: #ffffffb0;
+}
+th {
+  text-align: left;
+  padding-right: 35px;
+  color: white;
+  font-size: 1.2em;
+  position: relative;
+
+  top: -10px;
+}
+tr {
+  border-bottom: 1px solid #ffffff6e;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #09699f;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #09699f;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
